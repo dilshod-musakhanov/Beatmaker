@@ -7,6 +7,7 @@
 body {
   font-family: sans-serif;
 }
+
 i,
 svg {
   pointer-events: none;
@@ -21,19 +22,19 @@ svg {
   cursor: pointer;
 }
 .kick-pad {
-  background: rgb(134, 193, 207);
+  background: rgb(177, 214, 223);
 }
 .snare-pad {
-  background: rgb(217, 223, 144);
+  background: rgb(233, 210, 189);
 }
 .hihat-pad {
-  background: rgb(236, 156, 236);
+  background: rgb(228, 191, 228);
 }
 .kick-pad.active {
-  background: rgb(52, 198, 235);
+  background: rgb(12, 164, 202);
 }
 .snare-pad.active {
-  background: rgb(219, 233, 73);
+  background: rgb(230, 138, 52);
 }
 .hihat-pad.active {
   background: rgb(183, 52, 231);
@@ -87,6 +88,10 @@ svg {
 select {
   width: 7rem;
   padding: 0.5rem;
+  border-radius: 0;
+  border: none;
+  background: rgb(92, 91, 91);
+  color: white;
 }
 
 .p {
