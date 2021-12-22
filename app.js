@@ -50,6 +50,15 @@ class Drumkit {
             this.isPlaying = null
         }
     }
+    updateButton() {
+        if(!this.isPlaying) {
+            this.playButton.innerText = "Stop";
+            this.playButton.classList.add("active");
+        } else {
+            this.playButton.innerText = "Play";
+            this.playButton.classList.remove("active");
+        }
+    }
 }
 
 const drumkit = new Drumkit;
@@ -62,5 +71,6 @@ drumkit.pads.forEach(pad => {
 });
 
 drumkit.playButton.addEventListener("click", ()=>{
+    drumkit.updateButton();
     drumkit.start();
 });

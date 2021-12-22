@@ -103,6 +103,10 @@ select {
   padding-bottom: 2.5rem;
 }
 
+.p button:active {
+  background: rgb(65, 122, 209);
+}
+
 .play {
   padding: 0.5rem 1.4rem;
   font-size: 1.2rem;
