@@ -94,6 +94,10 @@ select {
   color: white;
 }
 
+.mute.active {
+  background: rgb(206, 61, 73);
+}
+
 .p {
   width: 80%;
   display: flex;
@@ -103,8 +107,8 @@ select {
   padding-bottom: 2.5rem;
 }
 
-.p button:active {
-  background: rgb(65, 122, 209);
+.p button.active {
+  background: rgb(206, 61, 73);
 }
 
 .play {
