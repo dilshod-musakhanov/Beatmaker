@@ -4,10 +4,12 @@ class Drumkit {
         this.pads = document.querySelectorAll(".pad");
         this.currentKick = './sounds/kick-classic.wav';
         this.currentSnare = './sounds/snare-acoustic01.wav';
-        this.currentKick = './sounds/hihat-acoustic01.wav';
+        this.currentHihat = './sounds/hihat-acoustic01.wav';
+        this.currentTom = './sounds/tom-acoustic01.wav';
         this.kickAudio = document.querySelector(".kick-sound");
         this.snareAudio = document.querySelector(".snare-sound");
         this.hihatAudio = document.querySelector(".hihat-sound");
+        this.tomAudio = document.querySelector(".tom-sound");
         this.index = 0;
         this.bpm = 150;
         this.isPlaying = null; 
@@ -37,6 +39,10 @@ class Drumkit {
               if (bar.classList.contains("hihat-pad")) {
                 this.hihatAudio.currentTime = 0;
                 this.hihatAudio.play();
+              }
+              if (bar.classList.contains("tom-pad")) {
+                this.tomAudio.currentTime = 0;
+                this.tomAudio.play();
               }
             }
           });
@@ -78,6 +84,9 @@ class Drumkit {
             case "hihat-select":
                 this.hihatAudio.src = selectionValue;
                 break;
+            case "tom-select":
+                this.tomAudio.src = selectionValue;
+                break;
         }
     }
     mute(e){
@@ -92,20 +101,26 @@ class Drumkit {
                     this.snareAudio.volume = 0;
                     break;
                 case "2":
-                    this.hithatAudio.volume = 0;
+                    this.hihatAudio.volume = 0;
+                    break;
+                case "3":
+                    this.tomAudio.volume = 0;
                     break;
             } 
         } else {
             switch(muteIndex){
                 case "0":
-                    this.kickAudio.volume = 0;
+                    this.kickAudio.volume = 1;
                     break;
                 case "1":
                     this.snareAudio.volume = 1;
                     break;
                 case "2":
-                    this.hithatAudio.volume = 2;
+                    this.hihatAudio.volume = 1;
                     break;
+                case "3":
+                    this.tomAudio.volume = 1;
+                    break;    
             } 
         }
     }
@@ -147,7 +162,7 @@ drumkit.selects.forEach(select =>{
 drumkit.muteButton.forEach(button =>{
     button.addEventListener("click", function(e) {
         drumkit.mute(e);
-    })
+    });
 });
 
 drumkit.tempoSlider.addEventListener("input", function(e){
