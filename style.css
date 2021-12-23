@@ -16,8 +16,8 @@ svg {
 .kick-pad,
 .snare-pad,
 .hihat-pad {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   margin: 1rem 0.5rem;
   cursor: pointer;
 }
@@ -53,9 +53,9 @@ svg {
 .hihat-track {
   display: flex;
   align-items: center;
-  width: 80%;
+  width: 75%;
   justify-content: space-between;
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 .kick,
@@ -99,12 +99,12 @@ select {
 }
 
 .p {
-  width: 80%;
+  width: 30%;
   display: flex;
   align-items: center;
-  justify-content: end;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .p button.active {
@@ -118,7 +118,31 @@ select {
   color: white;
   border: none;
   cursor: pointer;
-  margin-right: 0.5rem;
+}
+
+.tempo {
+  width: 30%;
+  margin: 1rem;
+}
+
+.tempo-slider {
+  -webkit-appearance: none;
+  padding: 0.2rem;
+  margin: 0rem 1rem;
+  width: 100%;
+  position: relative;
+  background: rgb(40, 34, 88);
+  color: white;
+  border-radius: 20%;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.tempo p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 @keyframes playTrack {
